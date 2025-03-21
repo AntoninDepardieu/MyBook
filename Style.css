@@ -1,0 +1,218 @@
+
+
+    .menu{
+        position: relative;
+        display: flex;
+        border: 1px solid rgba(100,100,100,0);
+        justify-self: right;
+
+    }
+    .drop-down-menu{
+        display: flex;
+        z-index: 5;
+    }
+    a{
+        z-index: 99;
+        color: black;
+        text-decoration: none;
+        font-family: "Metropolis", sans-serif; 
+        padding-inline: 10px;
+        position: relative;
+        font-size: clamp(10px, 2vw, 30px);
+        cursor: pointer;
+        display: inline-block;
+        transition: transform 0.1s;
+        transform-origin: center;
+
+    }
+
+    a.active {
+        color: rgb(144, 144, 144);
+        pointer-events: none;
+    }
+    a:hover{
+        color: rgb(144, 144, 144);
+        background-color: rgba(0, 0, 255, 0);
+        transform: scale(1.01);
+    }
+    h1{
+        font-family: "Metropolis", sans-serif; 
+    }
+    p{
+        font-family: "Metropolis", sans-serif;
+    }
+
+    .Burger{
+        display: none;
+
+        padding-right: 5px;
+
+        width: clamp(30px, 5vw, 70px);
+
+        border: 1px solid rgba(0, 0, 0, 0);
+        transition: transform 0.1s;
+    }
+    .Burger:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+    .Burger:hover + .drop-down-menu,
+    .drop-down-menu:hover{
+        display: flex;
+    }
+
+
+
+    .home-bar{
+        display: grid;
+
+        grid-template-columns: 1fr auto 1fr;
+
+
+        width: 100%;
+
+        justify-content: center;
+        align-items: center;
+
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        /*background : linear-gradient(360deg, rgba(255, 255, 255, 100) 1%, rgba(255, 255, 255, 100) 20% );*/
+        border: 0px solid aqua;
+
+        margin: 0;
+        padding:0;
+        background-color: white;
+
+
+        /*overflow: hidden;*/
+
+    }
+    
+    
+
+    .icon-div{
+        position: relative;
+
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+        justify-content: center; 
+        align-items: center;   
+
+        padding: 0;   
+        margin: 0;
+    }
+    .iconbutton{
+        cursor: pointer;
+        z-index: 99;
+        width: fit-content;
+
+        margin: 0;
+        padding:0;
+
+        justify-self: center; 
+        align-self: center;   
+        
+    }
+    .icon{
+        display: flex;
+        justify-self: center; 
+        align-self: center;  
+        position: relative;
+
+        padding: 20% 0;
+        margin: 0;
+
+        width: clamp(30px,15vw,50px);
+        height: 100%;
+
+        border: 1px solid rgba(0, 0, 0, 0);
+        cursor: pointer;
+        z-index: 80;
+
+    }
+
+
+
+    
+    .titre-div{
+        display: flex;
+        align-items: center;
+        border : 0px solid red
+    }
+    .titre{
+        font-family: "Metropolis", sans-serif;
+        /*font-size: clamp(0px, 4vw, 30px);*/
+        padding-left: 16px;
+        position: relative;
+        text-align: left;
+    }
+
+
+    
+    .section1 {
+        justify-content: center;
+        
+        position: relative;
+        display: flex;
+        border : 1px solid rgba(126, 15, 15, 0);
+
+        z-index: 15;
+    }
+
+    .section2{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+
+
+
+        border : 1px solid rgba(72, 255, 0, 0);
+
+    }
+    body, html{
+        margin : 0;
+        padding: 0;
+        background-color: rgb(255, 255, 255);  
+        user-select: none;
+        -webkit-user-drag: none;
+        scrollbar-width: none;
+    }
+    body img, html img{
+        margin : 0;
+        padding: 0;
+        background-color: rgb(255, 255, 255);  
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    body::-webkit-scrollbar{
+        display: none;
+    }
+    @media (max-width:768px) {
+        .drop-down-menu{
+            position: absolute;
+            background-color: rgb(239, 239, 239);
+            display:none;
+            flex-direction: column;
+            z-index: 3;
+
+            right: 0;
+            top: 100%;
+        }
+        .Burger{
+            display: flex;
+            z-index: 2;
+        }
+        .titre{
+            left:0px
+        }
+        a{
+            padding: 10px 16px 10px 16px;
+            font-size: 20px;
+            align-self: center;
+        }
+        
+    }
